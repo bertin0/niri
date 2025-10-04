@@ -858,6 +858,7 @@ mod tests {
                 Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
                 Super+Alt+S allow-when-locked=true { spawn-sh "pkill orca || exec orca"; }
                 Mod release=true { toggle-overview; }
+                Shift+Mod release=true allow-invalidation=false { toggle-window-floating; }
             }
 
             switch-events {
@@ -1849,6 +1850,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: false,
+                        allow_invalidation: true,
                         hotkey_overlay_title: Some(
                             Some(
                                 "Inhibit",
@@ -1870,6 +1872,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: false,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -1891,6 +1894,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: true,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -1908,6 +1912,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: Some(
                             None,
                         ),
@@ -1927,6 +1932,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -1946,6 +1952,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -1963,6 +1970,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -1982,6 +1990,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2001,6 +2010,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2018,6 +2028,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2039,6 +2050,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2060,6 +2072,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2079,6 +2092,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: false,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2096,6 +2110,7 @@ mod tests {
                         ),
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2115,6 +2130,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: true,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2130,6 +2146,23 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
+                        hotkey_overlay_title: None,
+                    },
+                    Bind {
+                        key: Key {
+                            trigger: KeyCompositor,
+                            modifiers: Modifiers(
+                                SHIFT,
+                            ),
+                        },
+                        action: ToggleWindowFloating,
+                        repeat: true,
+                        release: true,
+                        cooldown: None,
+                        allow_when_locked: false,
+                        allow_inhibiting: true,
+                        allow_invalidation: false,
                         hotkey_overlay_title: None,
                     },
                 ],
@@ -2254,6 +2287,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2277,6 +2311,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                     Bind {
@@ -2302,6 +2337,7 @@ mod tests {
                         cooldown: None,
                         allow_when_locked: false,
                         allow_inhibiting: true,
+                        allow_invalidation: true,
                         hotkey_overlay_title: None,
                     },
                 ],
